@@ -20,6 +20,10 @@
     list-style: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Poppins", sans-serif;
 }
@@ -183,6 +187,7 @@ img {
 .menu .navbar ul li {
     position: relative;
     float: left;
+    transition: all 0.3s ease;
 }
 
 .menu .navbar ul li a {
@@ -250,11 +255,13 @@ td {
     color: #FFFFFF;
 }
 
-a {
+a,
+button {
     transition: all 0.3s ease;
 }
 
-a:hover {
+a:hover,
+button:hover {
     transform: scale(1.1);
 }
 
@@ -352,6 +359,12 @@ h3 {
     margin-bottom: 0;
 }
 
+/* Scroll */
+
+.products {
+    scroll-margin-top: 55px;
+}
+
 /* Products */
 
 .products {
@@ -374,7 +387,7 @@ h3 {
     justify-content: center;
 }
 
-.cards {
+.cards.cardsGrid {
     background-color: var(--color-card);
     padding: 1rem;
     display: flex;
@@ -385,7 +398,7 @@ h3 {
     transition: all 0.3s ease;
 }
 
-.cards:hover {
+.cards.cards.cardsGrid:hover {
     box-shadow: 2px 19px 24px -5px rgba(0, 0, 0, 0.83);
     -webkit-box-shadow: 2px 19px 24px -5px rgba(0, 0, 0, 0.83);
     -moz-box-shadow: 2px 19px 24px -5px rgba(0, 0, 0, 0.83);
@@ -485,8 +498,69 @@ h3 {
 }
 
 footer {
-    padding: 50px 0;
+    padding: 40px 0;
     background-color: var(--primary-color);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: -10px;
+}
+
+.footer-column h3 {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #F3F3F3;
+    font-size: 15px;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.footer-column a:hover {
+    color: #FFFFFF;
+}
+
+.footer-column form {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.footer-column label {
+    font-size: 15px;
+    display: block;
+    color: #FFFFFF;
+    margin: 5px 0px;
+}
+
+.footer-column input[type="text"],
+.footer-column input[type="email"] {
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    padding: 3px;
+    border-radius: 5px;
+    border: 1px solid #FFFFFF;
+    background-color: transparent;
+    color: #FFFFFF;
+    outline: none;
+}
+
+.footer-column button[type="submit"] {
+    margin-top: 9px;
+    display: inline-block;
+    padding: 10px 25px;
+    color: var(--primary-color);
+    border-radius: 25px;
+    background-color: var(--color-white);
+    border: none;
+    text-transform: capitalize;
+    cursor: pointer;
 }
 
 @media (max-width: 1280px) {
@@ -578,4 +652,25 @@ footer {
     footer {
         padding: 30px;
     }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: 15px;
+    }
+
+    .footer-column input[type="text"],
+    .footer-column input[type="email"] {
+        width: 70%;
+    }
+}
+
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
 }
