@@ -302,7 +302,7 @@ button:hover {
 .information p {
     font-size: 16px;
     color: #181713;
-    margin-bottom: 45px;
+    margin-bottom: 20px;
 }
 
 .btn-2 {
@@ -626,6 +626,11 @@ footer {
     .header {
         min-height: 0vh;
         padding: 100px 30px;
+    }
+
+    .header p,
+    .information p {
+        margin-bottom: 45px;
     }
 
     .header-content {
