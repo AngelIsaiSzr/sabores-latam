@@ -29,7 +29,7 @@
                     <li><a href="#home">Inicio</a></li>
                     <li><a href="#services">Servicios</a></li>
                     <li><a href="#products">Productos</a></li>
-                    <li><a href="#contact">Conocenos</a></li>
+                    <li><a href="about.html">Conocenos</a></li>
                 </ul>
             </nav>
             <div>
@@ -48,7 +48,7 @@
                                 </thead>
                                 <tbody></tbody>
                             </table>
-                            <a href="#" class="btn-1">Vaciar Carrito</a>
+                            <a href="#" id="clear-cart" class="btn-1">Vaciar Carrito</a>
                         </div>
                     </li>
                 </ul>
@@ -94,10 +94,10 @@
         </div>
     </section>
 
-    <main class="products container" id="products">
+    <main class="products container">
         <h2>Productos destacados</h2>
 
-        <div class="container-section">
+        <div class="container-section" id="products">
             <div class="cards">
                 <img src="../images/comida1.png" alt="">
                 <h4>item</h4>
@@ -116,12 +116,13 @@
                         <button class="list-button">N°4</button>
                     </li>
                 </ul>
-                <button class="buy-button" type="submit">Comprar</button>
+                <p class="precio">$45.00</p>
+                <button class="add-cart buy-button" type="submit" data-id="1">Comprar</button>
             </div>
 
             <div class="cards">
                 <img src="../images/comida2.png" alt="">
-                <h4>item</h4>
+                <h4>item2</h4>
                 <p>Tamaño</p>
                 <ul class="ul-list">
                     <li class="item-list">
@@ -134,12 +135,13 @@
                         <button class="list-button">Grande</button>
                     </li>
                 </ul>
-                <button class="buy-button" type="submit">Comprar</button>
+                <p class="precio">$15.00</p>
+                <button class="add-cart buy-button" type="submit" data-id="2">Comprar</button>
             </div>
 
             <div class="cards">
                 <img src="../images/comida3.webp" alt="">
-                <h4>item</h4>
+                <h4>item3</h4>
                 <p>Tamaño</p>
                 <ul class="ul-list">
                     <li class="item-list">
@@ -152,7 +154,8 @@
                         <button class="list-button">Grande</button>
                     </li>
                 </ul>
-                <button class="buy-button" type="submit">Comprar</button>
+                <p class="precio">$55.00</p>
+                <button class="add-cart buy-button" type="submit" data-id="3">Comprar</button>
             </div>
 
             <div class="cards">
@@ -411,6 +414,7 @@
 
     
 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
+<script src="../js/script.js"></script>
 </body>
 
 </html>
