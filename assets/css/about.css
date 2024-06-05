@@ -1,12 +1,41 @@
-header {
-    text-align: center;
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
-.list-group-item a {
-    text-decoration: none;
+.card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(0.95);
 }
 
-.card img {
-    width: 420px;
-    height: 420px;
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.social-links a {
+    color: #6c757d;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #007bff;
 }
