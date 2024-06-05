@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -15,12 +15,12 @@
             <form action="">
                 <h1>Inicio de sesión</h1>
                 <div class="input-box">
-                    <input type="text" placeholder="Usuario" required>
+                    <input type="email" placeholder="Correo" id="correo"  required>
                     <i class='bx bxs-user'></i>
                 </div>
 
                 <div class="input-box">
-                    <input type="password" placeholder="Contraseña" required>
+                    <input type="password" placeholder="Contraseña" id="Contraseña"  required>
                     <i class='bx bxs-lock-alt'></i>
                 </div>
 
@@ -29,16 +29,35 @@
                     <a href="#">¿Olvidaste tu contraseña?</a>
                 </div>
 
-                <a type="submit" class="btn" href="assets/html/main.html">Login</a>
+                <button  class="btn" >Login </button>
 
                 <div class="link-registro">
                     <p>¿No tienes una cuenta?
                         <a href="#">Registrate</a>
                     </p>
                 </div>
+                <div id="message"></div>
             </form>
         </div>
     </div>
+    <script>       
+    function ValidarFormulario() {
+        const correo=document.getElementById('correo').value
+        const Contraseña=document.getElementById('Contraseña').value
+        const mensaje = document.getElementById(message)
+
+        const correctoUsuario = "usuario@gmail.com";
+        const correctaContraseña ="1234";
+
+        if(correo == correctoUsuario && Contraseña ==correctaContraseña ){
+            window.location.href= 'main.html'
+        }else{
+            mensaje.textContent =" Correo o Contraseña incorrectos"
+            mensaje.style.color="red"
+        }
+        
+    }
+    </script>
 </body>
 
 </html>
